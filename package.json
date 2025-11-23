@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "server": "tsx watch src/extraction/server.ts",
+    "server:prod": "tsx src/extraction/server.ts",
+    "start:all": "npm run server:prod & npm start",
     "lint": "next lint"
   },
   "dependencies": {

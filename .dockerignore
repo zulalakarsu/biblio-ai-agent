@@ -1,0 +1,16 @@
+node_modules
+.next
+.git
+.env
+.env.local
+.env.save
+*.log
+extraction-results/*
+!extraction-results/.gitkeep
+master-references/*
+!master-references/.gitkeep
+README.md
+docker-compose.yml
+Dockerfile
+.dockerignore
+
