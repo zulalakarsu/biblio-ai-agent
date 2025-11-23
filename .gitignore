@@ -1,0 +1,53 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# Next.js (not used, but keep in gitignore just in case)
+/.next/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+.env.save
+
+# typescript
+*.tsbuildinfo
+
+# outputs
+/outputs/*
+!/outputs/.gitkeep
+/cache/*
+!/cache/.gitkeep
+
+# extraction results (local job storage)
+/extraction-results/*
+!/extraction-results/.gitkeep
+
+# master references table (persistent data)
+/master-references/*
+!/master-references/.gitkeep
+
+# logs
+*.log
+/tmp/*.log
+

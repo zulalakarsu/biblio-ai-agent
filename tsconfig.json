@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./biblio-ui-design/src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "biblio-ui-design/src/components/Logo.tsx",
+    "biblio-ui-design/src/components/Hero.tsx",
+    "biblio-ui-design/src/components/Footer.tsx",
+    "biblio-ui-design/src/components/FileUploadZone.tsx",
+    "biblio-ui-design/src/components/ProgressTracker.tsx",
+    "biblio-ui-design/src/components/ResultsTable.tsx",
+    "biblio-ui-design/src/components/ui/button.tsx",
+    "biblio-ui-design/src/components/ui/card.tsx",
+    "biblio-ui-design/src/components/ui/table.tsx",
+    "biblio-ui-design/src/components/ui/progress.tsx",
+    "biblio-ui-design/src/components/ui/badge.tsx",
+    "biblio-ui-design/src/components/ui/select.tsx",
+    "biblio-ui-design/src/lib/**/*.ts",
+    "src/**/*.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    "biblio-ui-design/src/components/NavLink.tsx",
+    "biblio-ui-design/src/App.tsx",
+    "biblio-ui-design/src/main.tsx",
+    "biblio-ui-design/src/pages"
+  ]
+}
