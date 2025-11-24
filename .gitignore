@@ -46,6 +46,7 @@ yarn-error.log*
 # master references table (persistent data)
 /master-references/*
 !/master-references/.gitkeep
+!/master-references/references-master.csv
 
 # logs
 *.log
