@@ -47,6 +47,7 @@ yarn-error.log*
 /master-references/*
 !/master-references/.gitkeep
 !/master-references/references-master.csv
+!/master-references/references.json
 
 # logs
 *.log
