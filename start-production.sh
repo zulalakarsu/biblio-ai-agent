@@ -4,23 +4,27 @@
 
 echo "🚀 Starting BiblioAI production servers..."
 
-# Start backend in background (production mode without watch)
+# Set PORT for Next.js if not set (Render provides dynamic PORT)
+export PORT=${PORT:-3000}
+
 echo "📡 Starting backend server on port 3001..."
 npm run server:prod &
 BACKEND_PID=$!
 
-# Wait a bit for backend to initialize
+echo "⏳ Waiting for backend to initialize..."
 sleep 5
 
-# Start frontend
-echo "🎨 Starting frontend server on port 3000..."
+echo "🎨 Starting frontend server on port $PORT..."
 npm start &
 FRONTEND_PID=$!
 
 echo "✅ Both servers started!"
-echo "   Backend PID: $BACKEND_PID"
-echo "   Frontend PID: $FRONTEND_PID"
+echo "   Backend PID: $BACKEND_PID (port 3001)"
+echo "   Frontend PID: $FRONTEND_PID (port $PORT)"
 
-# Keep script running
+# Trap SIGTERM and SIGINT to gracefully shutdown
+trap "echo 'Shutting down...'; kill $BACKEND_PID $FRONTEND_PID; exit 0" SIGTERM SIGINT
+
+# Keep script running and wait for both processes
 wait $BACKEND_PID $FRONTEND_PID
 
