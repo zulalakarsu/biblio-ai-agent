@@ -16,7 +16,8 @@ export default {
   PERPLEXITY_API_KEY: process.env.PERPLEXITY_API_KEY || '',
   
   // Server
-  PORT: parseInt(process.env.PORT || '3001', 10),
+  // Backend always uses 3001, frontend uses PORT env var
+  PORT: parseInt(process.env.BACKEND_PORT || '3001', 10),
   HOST: process.env.HOST || '0.0.0.0',
   
   // File limits

@@ -4,8 +4,11 @@
 
 echo "🚀 Starting BiblioAI production servers..."
 
-# Set PORT for Next.js if not set (Render provides dynamic PORT)
-export PORT=${PORT:-3000}
+# Save the original PORT (Render sets this to 10000)
+FRONTEND_PORT=${PORT:-3000}
+
+# Backend always uses 3001 (set BACKEND_PORT, unset PORT for backend)
+export BACKEND_PORT=3001
 
 echo "📡 Starting backend server on port 3001..."
 npm run server:prod &
@@ -13,6 +16,9 @@ BACKEND_PID=$!
 
 echo "⏳ Waiting for backend to initialize..."
 sleep 5
+
+# Restore PORT for frontend
+export PORT=$FRONTEND_PORT
 
 echo "🎨 Starting frontend server on port $PORT..."
 npm start &
