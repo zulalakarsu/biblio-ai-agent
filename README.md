@@ -18,12 +18,16 @@ Extract and enhance academic references from PDFs using GPT-4o-mini with automat
 - 🔄 **Incremental Updates** - Add more PDFs without duplicates
 
 ---
+## Demo
+
+### 1. Extracting References from pdf 
 <img width="1126" height="810" alt="Image" src="https://github.com/user-attachments/assets/888f13bc-dba8-49bc-92bb-420e715b0135" />
 
-<img width="1006" height="1069" alt="Image" src="https://github.com/user-attachments/assets/baee1986-7d45-4fc5-8db7-5e1a3dff4a52" />
+### 2. Enhancing resultst with first author affiliation 
+<img width="948" height="484" alt="Image" src="https://github.com/user-attachments/assets/9ac5a904-e15f-4d3b-b82b-b693c44bccab" />
 
-<img width="915" height="1059" alt="Image" src="https://github.com/user-attachments/assets/6b0df646-8e51-4c05-a858-281c7e4fd7a9" />
-
+### 3. Extracted 596 references
+<img width="901" height="801" alt="Image" src="https://github.com/user-attachments/assets/a697868e-49fe-4c6e-b70a-d06d77806efa" />
 
 ---
 
